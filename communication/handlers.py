@@ -8,6 +8,8 @@ class MainHandler(WebSocketHandler):
         print("WebSocket opened")
 
     def on_message(self, message):
+        msg = "Mensagem recebida {}".format(message)
+        print(msg)
         if message in ['olá','ola', 'Ola', 'Olá']:
             self.write_message(
                 u"Ola eu sou o bot smart! Como posso ajuda-lo"

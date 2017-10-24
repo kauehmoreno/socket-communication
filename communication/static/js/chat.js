@@ -55,6 +55,7 @@ function insertChat(who, text, time = 0){
 //     $("ul").empty();
 // }
 //
+
 $(".mytext").on("keyup", function(e){
     if (e.which == 13){
         var text = $(this).val();
@@ -76,6 +77,9 @@ resetChat();
 // insertChat("me", "Spaceman: Computer! Computer! Do we bring battery?!", 9500);
 // insertChat("you", "LOL", 12000);
 //-- NOTE: No use time on insertChat.
+// $(document).ready(function() {
+//
+// }
 
 function socket(msg){
   var ws = new WebSocket("ws://localhost:8888/");
@@ -84,6 +88,6 @@ function socket(msg){
   };
   ws.onmessage = function (evt) {
      insertChat('you', evt.data);
-     ws.close();
+    //  ws.close();
   };
 }
