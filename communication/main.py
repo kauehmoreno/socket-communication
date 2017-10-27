@@ -65,10 +65,11 @@ def send_email():
 def main():
     from urls import routers
     from settings import template_path
-    socket = socket_com()
+    # socket = socket_com()
     app = routers()
     app.settings = dict(zip(['template_path'], [template_path]))
     app.listen(8888)
+    print(app)
     tornado.ioloop.IOLoop.configure('tornado.platform.asyncio.AsyncIOLoop')
     tornado.ioloop.IOLoop.current().start()
 

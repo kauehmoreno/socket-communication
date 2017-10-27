@@ -10,3 +10,11 @@ Trabalho da faculdade para comunicação de socket entre cliente e servidor.
 
 > Simulação de um chatboot que tenta adivinhar o sexo da pessoa pelo nome
 > usando comunição socket
+
+> Para rodar esse trabalho sem interagir com o rpc por favor comente a parte
+> de `socket() no main loop`
+
+
+## Integracao com o trabalho RPC
+
+> Descomente a linha socket() para o funcionamento
